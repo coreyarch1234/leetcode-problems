@@ -7,6 +7,4 @@ def containsDuplicate(nums):
     if len(nums) <= 1:
         return False
     without_dup = list(set(nums))
-    if len(without_dup) == 1:
-        return True
     return len(nums) != len(without_dup)
