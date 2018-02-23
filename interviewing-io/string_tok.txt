@@ -1,0 +1,41 @@
+
+
+# Given a set of strings, e.g. {“one”, “cat”, “two”, “four”}, and a target string, e.g. “fouroneone”, return true if the target string is composed (by concatenation) of elements from the set.
+# “fouroneone” -> true
+# “onecat” -> true
+# “fouron” -> false
+# “twone” -> false
+#
+# tonewo
+#
+#
+# # DFS/BFS (can be solved)
+# # sliding window
+# # divide and conquer
+# # dp (can be solved)
+# # recursion
+# # greedy
+# # ---------------
+# # CAP theorem, blogs/videos on scalability (instagmra eng blog, "how we scaled dropbox")
+#
+# def check_string(input_str, input_set):
+#     index = 0
+#     potential_str = input_str[index]
+#
+#     finished = False
+#
+#     start_index=0
+#     for index, letter in enumerate(input_str):
+#         print "index, letter: ",[index,letter]
+#         if input_str[start_index:index] in input_set:
+#             if len(input_str[start_index:index]) == 0:
+#                 print "length is 0"
+#                 return
+#
+#             start_index += 1
+#             print "input str index worked:",input_str[start_index:index]
+#         print "input str index:",input_str[start_index:index]
+#
+#
+#
+# print check_string("onecat", {"one", "cat", "two", "four"})
