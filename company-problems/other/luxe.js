@@ -1,5 +1,9 @@
-// Implement a class that performs async queries but ensures that only N queries are performed in a given time frame (sliding).
-// If a new query is requested and the amount of queries exceeds the limit, the query is queued and performed once the time frame allows new queries.
+// Implement a class that performs async queries but ensures that only N
+// queries are performed in a given time frame (sliding).
+
+// If a new query is requested and the amount of queries exceeds the limit, the
+// query is queued and performed once the time frame allows new queries.
+
 // As an example, we want to only make 3 queries per minute.
 // A real life example would be an external API that only allows 3 calls per minute.
 

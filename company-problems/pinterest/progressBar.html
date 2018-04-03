@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class='container'>
+        <div id='progress-bar'></div>
+    </div>
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #progress-bar {
+      height: 2px;
+      background-color: #bd081c;
+    }
+  </style>
+  <script>
+    class ProgressBar {
+      constructor(percent, element) {
+        this.percent = percent;
+        this.width = 0;
+        this.element = element;
+      }
+      increment() {
+        if (this.width < 100) {
+          this.width += this.percent * 100;
+          this.element.css('width', `${this.width}%`);
+          const progress = setTimeout(() => {
+            return this.increment()
+          }, 10);
+        }else{
+          return
+        }
+      }
+    }
+    const progressBar = $('#progress-bar');
+    const bar = new ProgressBar(0.01, progressBar);
+    bar.increment();
+  </script>
+</html>
